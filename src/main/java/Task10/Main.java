@@ -11,11 +11,11 @@ public class Main {
             System.out.println("Methods: " + Arrays.toString(clazz.getDeclaredMethods()));
             System.out.println("Implements: " + ": " + Arrays.toString(clazz.getAnnotatedInterfaces()));
 
-            Class<?> base = clazz.getSuperclass();
-            if(base != null){
-                System.out.println("Extends: " + base.getName());
-                if(!base.getName().equals("java.lang.Object")) {
-                    describeClass(base.getName());
+            Class<?> basicBread = clazz.getSuperclass();
+            if(basicBread != null){
+                System.out.println("Extends: " + basicBread.getName());
+                if(!basicBread.getName().equals("java.lang.Object")) {
+                    describeClass(basicBread.getName());
                 }
             }
         } catch (ClassNotFoundException e) {
